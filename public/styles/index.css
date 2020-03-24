@@ -7172,5 +7172,12 @@ div#carouselExampleIndicators {
   max-width: 1140px;
   height: 450px; }
 
+#certificates {
+  background: url(/images/bg_services.png) 45px 60%;
+  padding-bottom: 30px; }
+
+#product-section {
+  background: url(/images/bg_team.png) 45px 60%; }
+
 
 /*# sourceMappingURL=index.css.map*/

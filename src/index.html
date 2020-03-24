@@ -27,14 +27,11 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="./images/slider/1.jpg" class="d-block w-100" alt="...">
+            <img src="<%=require('./images/slider/1.jpg')%>" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="./images/slider/2.jpg" class="d-block w-100" alt="...">
-        </div><!--
-            <div class="carousel-item">
-                <img src="./images/1.jpg" class="d-block w-100" alt="...">
-            </div>-->
+            <img src="<%=require('./images/slider/2.jpg')%>" class="d-block w-100" alt="...">
+        </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,7 +48,7 @@
     <div id="product" class="container marketing">
         <div class="row">
             <div class="col-lg-4">
-                <img src="./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт А.png" alt=""
+                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт А.png')%>" alt=""
                      class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2>Морская капуста сушеная шинкованная термической сушки</h2>
                 <p>Производитель: Китай, Weihai Eastway Sea foods Со., Ltd</p>
@@ -91,7 +88,7 @@
         </div>
     </div>
 </div>
-<div style='background: url("./images/bg_team.png") 45px 60%'>
+<div id="product-section">
     <div class="container marketing">
         <div class="row title-text">
             <h1 class="margin-auto padding-15 text-align-center">Сушеная морская капуста оптом</h1>
@@ -114,7 +111,7 @@
                 </ul>
             </div>
             <div class="col-md-5">
-                <img src="./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт А подробно.png"
+                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт А подробно.png')%>"
                      alt=""
                      class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
@@ -138,7 +135,7 @@
                 </ul>
             </div>
             <div class="col-md-5">
-                <img src="./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт Б.png" alt=""
+                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт Б.png')%>" alt=""
                      class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
         </div>
@@ -159,7 +156,7 @@
                 </ul>
             </div>
             <div class="col-md-5">
-                <img src="./images/1.jpg" alt=""
+                <img src="<%=require('./images/1.jpg')%>" alt=""
                      class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
         </div>
@@ -167,17 +164,17 @@
 </div>
 <!--END ТОВАРЫ-->
 <!--СЕРТИФИКАТЫ-->
-<div style='background: url("./images/bg_services.png") 45px 60%; padding-bottom: 30px;'>
+<div id="certificates">
     <div class="row title-text">
         <h1 class="margin-auto padding-15 text-align-center">Вся сушеная морская капуста сертифицирована</h1>
     </div>
     <div class="row featurette margin-auto block-section">
         <div class="col text-align-center">
-            <img src="./images/certificates/декларация соответствия морская капуста термической сушки.jpg" alt=""
+            <img src="<%=require('./images/certificates/декларация соответствия морская капуста термической сушки.jpg')%>" alt=""
                  style="width: 100%; max-width: 500px;">
         </div>
         <div class="col text-align-center">
-            <img src="./images/certificates/декларация соответствия морская капуста естественной сушки.jpg" alt=""
+            <img src="<%=require('./images/certificates/декларация соответствия морская капуста естественной сушки.jpg')%>" alt=""
                  style="width: 100%; max-width: 500px;">
         </div>
     </div>
@@ -195,7 +192,7 @@
     </div>
 </div>-->
 <!--СКЛАДЫ-->
-<div class="storage-section">
+<div id="storage" class="storage-section">
     <div class="row title-text">
         <h1 class="margin-auto padding-15 text-align-center">Сушеная морская капуста постоянно в наличии на складе</h1>
     </div>
@@ -203,12 +200,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-6 shadow-sm">
-                    <img src="./images/storage.png" alt="" class="card-img-top" width="100%">
+                    <img src="<%=require('./images/storage.png')%>" alt="" class="card-img-top" width="100%">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card mb-6 shadow-sm">
-                    <img src="./images/storage2.png" alt="" class="card-img-top" width="100%">
+                    <img src="<%=require('./images/storage2.png')%>" alt="" class="card-img-top" width="100%">
                 </div>
             </div>
         </div>
