@@ -1,6 +1,7 @@
 'use strict';
 
 import 'jquery';
-/*import '@popperjs/core';*/
+import 'jquery-validation';
 import 'popper.js';
+import 'validator';
 import 'bootstrap';

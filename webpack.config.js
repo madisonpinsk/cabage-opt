@@ -98,7 +98,11 @@ module.exports = (env, argv) => {
 		},
 		plugins: [
 			new CleanWebpackPlugin([
-				'public/*',
+				'public/images/*',
+				'public/scripts/*',
+				'public/styles/*',
+				'public/favicon.ico',
+				'public/index.html',
 			], {
 				root: __dirname,
 			}),

@@ -48,7 +48,8 @@
     <div id="product" class="container marketing">
         <div class="row">
             <div class="col-lg-4">
-                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт А.png')%>" alt=""
+                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт А.png')%>"
+                     alt=""
                      class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2>Морская капуста сушеная шинкованная термической сушки</h2>
                 <p>Производитель: Китай, Weihai Eastway Sea foods Со., Ltd</p>
@@ -135,7 +136,8 @@
                 </ul>
             </div>
             <div class="col-md-5">
-                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт Б.png')%>" alt=""
+                <img src="<%=require('./images/cabbage/Морская капуста сушеная шинкованная термической сушки, сорт Б.png')%>"
+                     alt=""
                      class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
         </div>
@@ -170,11 +172,13 @@
     </div>
     <div class="row featurette margin-auto block-section">
         <div class="col text-align-center">
-            <img src="<%=require('./images/certificates/декларация соответствия морская капуста термической сушки.jpg')%>" alt=""
+            <img src="<%=require('./images/certificates/декларация соответствия морская капуста термической сушки.jpg')%>"
+                 alt=""
                  style="width: 100%; max-width: 500px;">
         </div>
         <div class="col text-align-center">
-            <img src="<%=require('./images/certificates/декларация соответствия морская капуста естественной сушки.jpg')%>" alt=""
+            <img src="<%=require('./images/certificates/декларация соответствия морская капуста естественной сушки.jpg')%>"
+                 alt=""
                  style="width: 100%; max-width: 500px;">
         </div>
     </div>
@@ -216,7 +220,105 @@
     </div>
 </div>
 <!--END СКЛАДЫ-->
-<br><br><br><br><br><br><br><br><br>
+
+<section id="message">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><span>Форма</span> обратной связи</h2>
+                <div id="contact-form">
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Ваш Email *</label>
+                                    <input id="form_email" type="email" class="form-control" placeholder="Введите адрес электронной почты*" required="" data-error="Требуется действующее электронное письмо.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Ваше имя *</label>
+                                    <input id="form_name" type="text" class="form-control" required="" placeholder="Как к Вам обращаться?">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 checkbox-data">
+                                <label>
+                                    <input type="checkbox" checked="checked" id="person_data" required="">
+                                    <i class="fa fa-2x icon-checkbox"></i>
+                                    <span>Подтверждаю согласие на обработку <a href="#" target="_blank">персональных данных</a></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea id="form_message" name="text_comment" class="form-control" placeholder="Пожалуйста, оставьте сообщение" rows="4" required="" data-error="Пожалуйста, оставьте нам сообщение."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="messages"></div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <input type="submit" name="btn_submit" id="button_contacts" value="Отправить сообщение">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Модальное окно -->
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h4>Форма обратной связи на Bootstrap</h4>
+            <form action="feedback/mail.php" method="post">
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="name" name="name" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email1">E-mail:</label>
+                    <input type="email" name="email" class="form-control" id="email1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефона:</label>
+                    <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea class="form-control" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Отправить сообщение</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>-->
+
+
+<!--<div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
+<div class="container">
+    <div class="alert alert-success hidden" id="success-alert"><h2>Успех</h2>
+        <div>Ваши данные были успешно отправлены.</div>
+    </div> &lt;!&ndash; Кнопка для открытия модального окна &ndash;&gt;
+    <button type="button" class="btn btn-lg btn-success"
+            data-toggle="modal" data-target="#myModal"> Регистрация
+    </button>
+</div>-->
+
+
+<br><br><br><br><br>
 
 </body>
 </html>

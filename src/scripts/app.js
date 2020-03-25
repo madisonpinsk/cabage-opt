@@ -1,48 +1,22 @@
 'use strict';
+import $ from 'jquery';
 
-/*$('.registerForm').bootstrapValidator({
-    message: 'This value is not valid',
-    feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-    },
-    fields: {
-        username: {
-            message: 'The username is not valid',
-            validators: {
-                notEmpty: {
-                    message: 'The username is required and cannot be empty'
-                },
-                stringLength: {
-                    min: 6,
-                    max: 30,
-                    message: 'The username must be more than 6 and less than 30 characters long'
-                },
-                regexp: {
-                    regexp: /^[a-zA-Z0-9_]+$/,
-                    message: 'The username can only consist of alphabetical, number and underscore'
-                }
-            }
+$('#button_contacts').click(function () {
+    var form_name = $('#form_name').val();
+    var form_email = $('#form_email').val();
+    var form_message = $('#form_message').val();
+    $.ajax({
+        url: "feedback/mail.php",
+        type: "post",
+        dataType: "json",
+        data: {
+            "form_name": form_name,
+            "form_email": form_email,
+            "form_message": form_message
         },
-        email: {
-            validators: {
-                notEmpty: {
-                    message: 'The email is required and cannot be empty'
-                },
-                emailAddress: {
-                    message: 'The input is not a valid email address'
-                }
-            }
+        success: function (data) {
+            console.log(11111111, data);
+            $('.messages').html(data.result);
         }
-    }
-});*/
-
-/*
-ymaps.ready(function(){
-  // Указывается идентификатор HTML-элемента.
-  var moscow_map = new ymaps.Map("map-container", {
-    center: [55.76, 37.64],
-    zoom: 10
-  });
-});*/
+    });
+});
