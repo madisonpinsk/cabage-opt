@@ -51,5 +51,5 @@ function send_mail($message)
     $headers .= "From: Название сайта \r\n"; // от кого письмо
 
     // отправляем письмо
-    mail($mail_to, $subject, $message, $headers);
+   @mail($mail_to, $subject, $message, $headers);
 }
