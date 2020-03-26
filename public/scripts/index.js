@@ -23754,10 +23754,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('#button_contacts').click(function
       "form_message": form_message
     },
     success: function success(data) {
-      console.log(11111111, data);
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.messages').html(data.result);
     }
   });
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()("nav a, #footer a").click(function () {
+  var elementClick = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("href");
+  var destination = jquery__WEBPACK_IMPORTED_MODULE_0___default()(elementClick).offset().top;
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()("body,html").animate({
+    scrollTop: destination
+  }, 800);
 });
 
 /***/ }),

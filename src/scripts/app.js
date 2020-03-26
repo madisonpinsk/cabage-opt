@@ -2,9 +2,9 @@
 import $ from 'jquery';
 
 $('#button_contacts').click(function () {
-    var form_name = $('#form_name').val();
-    var form_email = $('#form_email').val();
-    var form_message = $('#form_message').val();
+    let form_name = $('#form_name').val();
+    let form_email = $('#form_email').val();
+    let form_message = $('#form_message').val();
     $.ajax({
         url: "feedback/mail.php",
         type: "post",
@@ -15,8 +15,13 @@ $('#button_contacts').click(function () {
             "form_message": form_message
         },
         success: function (data) {
-            console.log(11111111, data);
             $('.messages').html(data.result);
         }
     });
+});
+
+$("nav a, #footer a").click(function () {
+    let elementClick = $(this).attr("href");
+    let destination = $(elementClick).offset().top;
+    $("body,html").animate({scrollTop: destination }, 800);
 });

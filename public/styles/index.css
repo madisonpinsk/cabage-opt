@@ -7145,6 +7145,9 @@ div#carouselExampleIndicators {
   max-width: 1300px;
   margin: 0 auto; }
 
+.carousel-section {
+  margin-bottom: 20px; }
+
 .block-section {
   max-width: 1200px; }
 
@@ -7173,11 +7176,11 @@ div#carouselExampleIndicators {
   height: 450px; }
 
 #certificates {
-  background: url(/images/bg_services.png) 45px 60%;
+  /*background: url("./images/bg_services.png") 45px 60%;*/
   padding-bottom: 30px; }
 
 #product-section {
-  background: url(/images/bg_team.png) 45px 60%; }
+  background-color: #f8f8f8; }
 
 #footer {
   margin: 50px auto; }
@@ -7224,7 +7227,7 @@ div#carouselExampleIndicators {
   cursor: pointer;
   font-size: 1.3em;
   text-transform: uppercase;
-  transition: background .6s,color .6s; }
+  transition: background .6s, color .6s; }
 
 #message #button_contacts:hover {
   background: 0 0;
