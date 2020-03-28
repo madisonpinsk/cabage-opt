@@ -48,8 +48,8 @@ function send_mail($message)
     // заголовок письма
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-    $headers .= "From: Название сайта \r\n"; // от кого письмо
+    $headers .= "From: new.laminaria.ru/ \r\n"; // от кого письмо
 
     // отправляем письмо
-   @mail($mail_to, $subject, $message, $headers);
+    mail($mail_to, $subject, $message, $headers);
 }
