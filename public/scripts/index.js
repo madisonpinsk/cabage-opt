@@ -23740,6 +23740,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * Отправка формы обратной связи
+ */
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('#button_contacts').click(function () {
   var form_name = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_name').val();
   var form_email = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_email').val();
@@ -23754,16 +23758,99 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('#button_contacts').click(function
       "form_message": form_message
     },
     success: function success(data) {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.messages').html(data.result);
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.messages').html(data.textError);
+
+      if (data.result === 'error') {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.messages').addClass('errors-messages');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.messages').removeClass('errors-messages');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.success-form-block').removeClass('success-form-block');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('#contact-form').addClass('block-hide');
+      }
     }
   });
 });
+/**
+ * END
+ */
+
+/**
+ * Медленная прокрутка по странице
+ */
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()("nav a, #footer a").click(function () {
   var elementClick = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("href");
   var destination = jquery__WEBPACK_IMPORTED_MODULE_0___default()(elementClick).offset().top;
   jquery__WEBPACK_IMPORTED_MODULE_0___default()("body,html").animate({
     scrollTop: destination
-  }, 800);
+  }, 1000);
+});
+/**
+ * END
+ */
+
+/**
+ * Валидирует Почту
+ *
+ * @param emailAddress
+ * @returns {boolean}
+ */
+
+function isValidEmailAddress(emailAddress) {
+  var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  return pattern.test(emailAddress);
+}
+
+function isValidName(name) {
+  return name.length >= 2;
+}
+
+function isValidMessage(message) {
+  return message.length > 2;
+}
+/**
+ * Вешаем событие инпут на почту, и проверяем на валидность
+ */
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_email').on('input', function () {
+  var email = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_email').val();
+  var validMail = isValidEmailAddress(email);
+
+  if (validMail) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_email').removeClass('error').addClass('ok');
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_email').removeClass('ok').addClass('error');
+  }
+});
+/**
+ * Событие инпут ввода имени, и проверяем на валидность
+ */
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_name').on('input', function () {
+  var name = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_name').val();
+  var validName = isValidName(name);
+
+  if (validName) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_name').removeClass('error').addClass('ok');
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_name').removeClass('ok').addClass('error');
+  }
+});
+/**
+ * Событие инпут ввода сообщения, и проверяем на валидность
+ */
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_message').on('input', function () {
+  var message = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_message').val();
+  var validMessage = isValidMessage(message);
+  console.log(111, message, validMessage);
+
+  if (validMessage) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_message').removeClass('error').addClass('ok');
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form_message').removeClass('ok').addClass('error');
+  }
 });
 
 /***/ }),

@@ -2,14 +2,20 @@
 
 $msg_box = ""; // в этой переменной будем хранить сообщения формы
 $errors = array(); // контейнер для ошибок
+function isValidEmail($email)
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}
+
+//
 // проверяем корректность полей
-if ($_POST['form_email'] == "") {
+if ($_POST['form_email'] == "" || !isValidEmail($_POST['form_email'])) {
     $errors[] = "Поле <span style='color: #666;'>Ваш e-mail</span> не заполнено";
 }
-if ($_POST['form_name'] == "") {
+if ($_POST['form_name'] == "" || strlen($_POST['form_name']) < 2) {
     $errors[] = "Поле <span style='color: #666;'>Ваше имя</span> не заполнено";
 }
-if ($_POST['form_message'] == "") {
+if ($_POST['form_message'] == "" || strlen($_POST['form_message']) < 3) {
     $errors[] = "Поле <span style='color: #666;'>Текст сообщения</span> не заполнено";
 }
 
@@ -22,18 +28,20 @@ if (empty($errors)) {
     send_mail($message); // отправим письмо
     // выведем сообщение об успехе
     $msg_box = "<span style='color: green;'>Спасибо за обращение, сообщение успешно отправлено! <br> В течении 24 часов я Вам отвечу!<br></span><br>";
-
+    $result = 'success';
 } else {
     // если были ошибки, то выводим их
     $msg_box = "";
     foreach ($errors as $one_error) {
         $msg_box .= "<style>.messages{margin-bottom: 20px;}</style><span style='color: red;'>$one_error</span><br>";
     }
+    $result = 'error';
 }
 
 // делаем ответ на клиентскую часть в формате JSON
 echo json_encode(array(
-    'result' => $msg_box
+    'textError' => $msg_box,
+    'result' => $result
 ));
 
 

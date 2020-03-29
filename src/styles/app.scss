@@ -93,11 +93,11 @@ div#carouselExampleIndicators {
 }
 
 #message #form_message {
-  height: 249px;
-  padding: 25px;
-  border: 1px solid #ccc;
-  font-size: 1.2em
-}
+   height: 249px;
+   padding: 25px;
+   border: 1px solid #ccc;
+   font-size: 1.2em
+ }
 
 #message #button_contacts {
   background: #666;
@@ -114,4 +114,50 @@ div#carouselExampleIndicators {
 #message #button_contacts:hover {
   background: 0 0;
   color: #666
+}
+
+#message input#form_email.ok {
+  border: 1px solid green;
+}
+
+#message input#form_email.error {
+  border: 1px solid red;
+}
+
+#message input#form_name.ok {
+  border: 1px solid green;
+}
+
+#message input#form_name.error {
+  border: 1px solid red;
+}
+
+#message textarea#form_message.ok {
+  border: 1px solid green;
+}
+
+#message textarea#form_message.error {
+  border: 1px solid red;
+}
+
+.messages.errors-messages {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.success-form-block {
+  display: none;
+}
+
+.block-hide {
+  display: none;
+}
+
+.block-block {
+  display: block;
 }
