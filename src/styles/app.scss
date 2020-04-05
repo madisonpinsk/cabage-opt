@@ -51,6 +51,10 @@ div#carouselExampleIndicators {
   padding-bottom: 30px;
 }
 
+#storage {
+  margin: 15px;
+}
+
 #product-section {
   background-color: #f8f8f8;
 }
@@ -61,7 +65,7 @@ div#carouselExampleIndicators {
 
 #message {
   padding-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
   background-color: #f8f8f8;
   border-top: 1px solid #e5e5e5
 }
@@ -80,13 +84,7 @@ div#carouselExampleIndicators {
   font-size: 1.2em
 }
 
-#message #form_email, #message #form_message, #message #form_name {
-  box-sizing: border-box;
-  border: 1px solid #fff;
-  box-shadow: none
-}
-
-#message #form_email, #message #form_name {
+#message #form_email, #message #form_name, #message #form_phone{
   padding: 25px;
   border: 1px solid #ccc;
   font-size: 1.1em
@@ -98,6 +96,10 @@ div#carouselExampleIndicators {
    border: 1px solid #ccc;
    font-size: 1.2em
  }
+
+#message .messages_phone-sections {
+  margin: 0 auto;
+}
 
 #message #button_contacts {
   background: #666;
@@ -114,30 +116,6 @@ div#carouselExampleIndicators {
 #message #button_contacts:hover {
   background: 0 0;
   color: #666
-}
-
-#message input#form_email.ok {
-  border: 1px solid green;
-}
-
-#message input#form_email.error {
-  border: 1px solid red;
-}
-
-#message input#form_name.ok {
-  border: 1px solid green;
-}
-
-#message input#form_name.error {
-  border: 1px solid red;
-}
-
-#message textarea#form_message.ok {
-  border: 1px solid green;
-}
-
-#message textarea#form_message.error {
-  border: 1px solid red;
 }
 
 .messages.errors-messages {
