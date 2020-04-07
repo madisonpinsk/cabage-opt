@@ -7138,6 +7138,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+body {
+  font-family: Currency,Tahoma,Helvetica,Arial,sans-serif; }
+
 #carouselExampleIndicators {
   margin-bottom: 50px; }
 
@@ -7171,13 +7174,56 @@ div#carouselExampleIndicators {
 .storage-section__info {
   margin-bottom: 20px; }
 
-.storage-section__map {
-  max-width: 1140px;
-  height: 450px; }
-
 #certificates {
   /*background: url("./images/bg_services.png") 45px 60%;*/
   padding-bottom: 30px; }
+
+#call-us-section {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffa500;
+  padding: 40px 0; }
+
+#call-us-section .call-us-section__icon {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 15px auto; }
+
+#call-us-section .call-us-section_header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38px;
+  color: white;
+  text-shadow: 0 2px 0 #a6761d;
+  margin: 15px auto;
+  text-align: center; }
+
+#call-us-section .call-us-section_phone {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  color: white;
+  text-shadow: 0 2px 0 #b38229;
+  margin-bottom: 15px;
+  text-align: center; }
+
+#call-us-section .call-us-section_email {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 72px;
+  color: white;
+  text-shadow: 0 2px 0 #b38229;
+  text-align: center;
+  word-wrap: break-word; }
+
+#map-section {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto; }
 
 #storage {
   margin: 15px; }
@@ -7191,8 +7237,7 @@ div#carouselExampleIndicators {
 #message {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #f8f8f8;
-  border-top: 1px solid #e5e5e5; }
+  background-color: #f8f8f8; }
 
 #message h2 {
   margin-bottom: 30px; }
