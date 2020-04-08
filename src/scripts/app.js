@@ -40,7 +40,6 @@ $(document).ready(function () {
      * Отправка центральной формы обратной связи
      */
     $('#center-button-form').click(function () {
-        console.log(1111111111111);
         let form_name = $('#form-center_name').val();
         let form_email = $('#form-center_email').val();
         $.ajax({
@@ -52,7 +51,18 @@ $(document).ready(function () {
                 "form_email": form_email,
             },
             success: function (data) {
-                console.log(22222, data);
+                if (data.result === 'success') {
+                    $('#form-center_name').val('');
+                    $('#form-center_email').val('');
+                }
+                $('.central-messages').html(data.textError);
+                if (data.result === 'error') {
+                    $('.central-messages').addClass('errors-messages');
+                } else {
+                    $('.central-messages').removeClass('errors-messages');
+                    //$('.success-form-block').removeClass('success-form-block');
+                    //$('#contact-form').addClass('block-hide');
+                }
             }
         });
     });

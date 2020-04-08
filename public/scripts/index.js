@@ -21540,7 +21540,6 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).ready(function () {
    */
 
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('#center-button-form').click(function () {
-    console.log(1111111111111);
     var form_name = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form-center_name').val();
     var form_email = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form-center_email').val();
     jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
@@ -21552,7 +21551,19 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).ready(function () {
         "form_email": form_email
       },
       success: function success(data) {
-        console.log(22222, data);
+        if (data.result === 'success') {
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form-center_name').val('');
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form-center_email').val('');
+        }
+
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.central-messages').html(data.textError);
+
+        if (data.result === 'error') {
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('.central-messages').addClass('errors-messages');
+        } else {
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()('.central-messages').removeClass('errors-messages'); //$('.success-form-block').removeClass('success-form-block');
+          //$('#contact-form').addClass('block-hide');
+        }
       }
     });
   });
