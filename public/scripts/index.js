@@ -21552,14 +21552,7 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).ready(function () {
         "form_email": form_email
       },
       success: function success(data) {
-        /*$('.messages').html(data.textError);
-        if (data.result === 'error') {
-            $('.messages').addClass('errors-messages');
-        } else {
-            $('.messages').removeClass('errors-messages');
-            $('.success-form-block').removeClass('success-form-block');
-            $('#contact-form').addClass('block-hide');
-        }*/
+        console.log(22222, data);
       }
     });
   });

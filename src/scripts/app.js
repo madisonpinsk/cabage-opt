@@ -52,14 +52,7 @@ $(document).ready(function () {
                 "form_email": form_email,
             },
             success: function (data) {
-                /*$('.messages').html(data.textError);
-                if (data.result === 'error') {
-                    $('.messages').addClass('errors-messages');
-                } else {
-                    $('.messages').removeClass('errors-messages');
-                    $('.success-form-block').removeClass('success-form-block');
-                    $('#contact-form').addClass('block-hide');
-                }*/
+                console.log(22222, data);
             }
         });
     });
