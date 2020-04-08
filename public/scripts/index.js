@@ -21506,7 +21506,6 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).ready(function () {
    * Отправка формы обратной связи
    */
   jquery__WEBPACK_IMPORTED_MODULE_1___default()('#button_contacts').click(function () {
-    console.log(1111111111111);
     var form_name = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form_name').val();
     var form_email = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form_email').val();
     var form_phone = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form_phone').val();
@@ -21529,6 +21528,38 @@ jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).ready(function () {
           jquery__WEBPACK_IMPORTED_MODULE_1___default()('.success-form-block').removeClass('success-form-block');
           jquery__WEBPACK_IMPORTED_MODULE_1___default()('#contact-form').addClass('block-hide');
         }
+      }
+    });
+  });
+  /**
+   * END
+   */
+
+  /**
+   * Отправка центральной формы обратной связи
+   */
+
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('#center-button-form').click(function () {
+    console.log(1111111111111);
+    var form_name = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form-center_name').val();
+    var form_email = jquery__WEBPACK_IMPORTED_MODULE_1___default()('#form-center_email').val();
+    jquery__WEBPACK_IMPORTED_MODULE_1___default.a.ajax({
+      url: "feedback/central-form.php",
+      type: "post",
+      dataType: "json",
+      data: {
+        "form_name": form_name,
+        "form_email": form_email
+      },
+      success: function success(data) {
+        /*$('.messages').html(data.textError);
+        if (data.result === 'error') {
+            $('.messages').addClass('errors-messages');
+        } else {
+            $('.messages').removeClass('errors-messages');
+            $('.success-form-block').removeClass('success-form-block');
+            $('#contact-form').addClass('block-hide');
+        }*/
       }
     });
   });
