@@ -7141,6 +7141,11 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: Currency,Tahoma,Helvetica,Arial,sans-serif; }
 
+#menu {
+  position: fixed;
+  z-index: 999;
+  width: 100%; }
+
 #carouselExampleIndicators {
   margin-bottom: 50px; }
 
@@ -7149,7 +7154,8 @@ div#carouselExampleIndicators {
   margin: 0 auto; }
 
 .carousel-section {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-top: 70px; }
 
 .block-section {
   max-width: 1200px; }
@@ -7177,9 +7183,12 @@ div#carouselExampleIndicators {
 .storage-section__info {
   margin-bottom: 20px; }
 
-#certificates {
-  /*background: url("./images/bg_services.png") 45px 60%;*/
-  padding-bottom: 30px; }
+.block-certificate {
+  justify-content: center; }
+
+.block-certificate .block-certificate__item {
+  max-width: 350px;
+  margin: 10px; }
 
 #call-us-section {
   max-width: 1920px;

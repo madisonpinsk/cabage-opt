@@ -2,6 +2,12 @@ body {
   font-family: Currency,Tahoma,Helvetica,Arial,sans-serif;
 }
 
+#menu {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
 #carouselExampleIndicators {
   margin-bottom: 50px;
 }
@@ -13,6 +19,7 @@ div#carouselExampleIndicators {
 
 .carousel-section {
   margin-bottom: 20px;
+  padding-top: 70px;
 }
 
 .block-section {
@@ -50,9 +57,13 @@ div#carouselExampleIndicators {
   margin-bottom: 20px;
 }
 
-#certificates {
-  /*background: url("./images/bg_services.png") 45px 60%;*/
-  padding-bottom: 30px;
+.block-certificate {
+  justify-content: center;
+}
+
+.block-certificate  .block-certificate__item{
+  max-width: 350px;
+  margin: 10px;
 }
 
 #call-us-section {
