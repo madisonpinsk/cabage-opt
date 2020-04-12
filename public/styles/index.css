@@ -7188,14 +7188,16 @@ div#carouselExampleIndicators {
 
 .block-certificate .block-certificate__item {
   max-width: 350px;
-  margin: 10px; }
+  margin: 10px;
+  box-shadow: 0 0.125rem 0.25rem black !important; }
 
 #call-us-section {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
   background-color: #ffa500;
-  padding: 80px 0; }
+  padding: 80px 0;
+  border-radius: 20px; }
 
 #call-us-section .call-us-section__icon {
   width: 74px;
@@ -7311,7 +7313,8 @@ div#carouselExampleIndicators {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  background-color: #ffa500; }
+  background-color: #ffa500;
+  border-radius: 20px; }
 
 #central-specification-form .block-central-form_header {
   font-family: "Open Sans", sans-serif;

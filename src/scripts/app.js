@@ -83,6 +83,18 @@ $(document).ready(function () {
      * END
      */
 
+    $('[data-fancybox="gallery"]').fancybox({
+        loop: true,
+        gutter : 10,
+        keyboard: true,
+        arrows: true,
+        infobar: true,
+        smallBtn: true,
+        toolbar: true,
+        idleTime: 3,
+        animationEffect: "zoom-in-out",
+        animationDuration: 600,
+    });
 
     var inputmask = new Inputmask("+7 (999) 999-99-99",{ "placeholder": "+7 (___) ___-__-__" });
     inputmask.mask($('#form_phone'));

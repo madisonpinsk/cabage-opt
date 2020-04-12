@@ -64,6 +64,7 @@ div#carouselExampleIndicators {
 .block-certificate  .block-certificate__item{
   max-width: 350px;
   margin: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 1.075) !important;
 }
 
 #call-us-section {
@@ -72,6 +73,7 @@ div#carouselExampleIndicators {
   margin: 0 auto;
   background-color: #ffa500;
   padding: 80px 0;
+  border-radius: 20px;
 }
 
 #call-us-section .call-us-section__icon {

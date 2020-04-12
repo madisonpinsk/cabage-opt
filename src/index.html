@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Сушеная морская капуста оптом</title>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="http://kenwheeler.github.io/slick/slick/slick-theme.css">-->
 </head>
@@ -233,33 +234,25 @@
     <div class="container storage-section__info">
         <div class="row block-certificate">
             <div class="col-md-auto block-certificate__item">
-                <div class="shadow-sm">
-                    <img style="width: 100%" src="<%=require('./images/certificates/декларация соответствия морская капуста термической сушки.jpg')%>">
-                </div>
+                <a data-fancybox-title="Lorem ipsum" data-fancybox="gallery" data-width="1500"
+                   href="<%=require('./images/certificates/декларация соответствия морская капуста термической сушки.jpg')%>">
+                    <img style="width: 100%"
+                         src="<%=require('./images/certificates/декларация соответствия морская капуста термической сушки.jpg')%>"
+                         alt="first picture">
+                </a>
             </div>
             <div class="col-md-auto block-certificate__item">
-                <div class="shadow-sm">
-                    <img style="width: 100%" src="<%=require('./images/certificates/декларация соответствия морская капуста естественной сушки.jpg')%>">
-                </div>
+                <a data-fancybox-title="Lorem ipsum" data-fancybox="gallery" data-width="1500"
+                   href="<%=require('./images/certificates/декларация соответствия морская капуста естественной сушки.jpg')%>">
+                    <img style="width: 100%"
+                         src="<%=require('./images/certificates/декларация соответствия морская капуста естественной сушки.jpg')%>"
+                         alt="second picture">
+                </a>
             </div>
         </div>
     </div>
 </div>
 <!--END СЕРТИФИКАТЫ-->
-<!--data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'-->
-<div class="row">
-
-</div>
-<!--<div class="margin-auto padding-15" style="width: 1200px;">
-    &lt;!&ndash; Кнопка для открытия модального окна &ndash;&gt;
-    <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#myModal">
-        Регистрация
-    </button>
-    <div class="alert alert-success hidden" id="success-alert">
-        <h2>Успех</h2>
-        <div>Ваши данные были успешно отправлены.</div>
-    </div>
-</div>-->
 <!--СКЛАДЫ-->
 <div id="storage" class="storage-section">
     <div class="row title-text">
@@ -286,8 +279,8 @@
             <img src="<%=require('./images/call-us/hotpng.png')%>" alt="" class="card-img-top" width="100%">
         </div>
         <h2 class="call-us-section_header">Свяжитесь с нами!</h2>
-        <div class="call-us-section_phone">8 958 762-99-32</div>
-        <div class="call-us-section_email">eleven@laminaria.ru</div>
+        <div class="call-us-section_phone"><a href="tel:8 958 762-99-32"><span>8 958 762-99-32</span></a></div>
+        <div class="call-us-section_email"><a href="mailto:eleven@laminaria.ru">eleven@laminaria.ru</a></div>
     </div>
 </div>
 <div id="map-section">
